@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>俄罗斯方块</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            display: flex;
+            gap: 20px;
+        }
+        #game-info {
+            color: white;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+        }
+        canvas {
+            border: 2px solid white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div id="game-info">
+            <h2>分数: <span id="score">0</span></h2>
+            <h2>等级: <span id="level">1</span></h2>
+            <h2>行数: <span id="lines">0</span></h2>
+            <h3>下一个方块:</h3>
+            <canvas id="nextCanvas" width="120" height="120"></canvas>
+            <h3>操作说明:</h3>
+            <p>↑: 旋转</p>
+            <p>←: 左移</p>
+            <p>→: 右移</p>
+            <p>↓: 加速下落</p>
+            <p>空格: 暂停</p>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
